@@ -3,14 +3,13 @@ import webbrowser as web
 import pyautogui as pg
 import time
 
-def process_excel(file):
+def process_excel(data):
     # Procesa el archivo Excel y envía mensajes de WhatsApp aquí
-    # Utiliza el código que proporcionaste
-
-    url_excel= r"C:\Users\---5---\Desktop\Clientes.xlsx"
+    #url_excel= r"C:\Users\---5---\Desktop\Clientes.xlsx"
     #img=Image.open(r"C:\Users\---5---\Desktop\descargar.jpeg")
-    data = pd.read_excel(url_excel, sheet_name='Ventas')
-    data.head(3)
+    #data = excel_data
+    #data = pd.read_excel(file_data, sheet_name='Ventas')
+    #data.head(3)
 
     for i in range(len(data)):
         celular = data.loc[i,'Celular'].astype(str) # Convertir a string para que se añada al mensaje
