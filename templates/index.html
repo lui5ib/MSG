@@ -5,9 +5,12 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Cargar un archivo Excel</h1>
+    <h1>Formulario de Carga de Archivo Excel</h1>
     <form action="/process/" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".xlsx">
+        <label for="file">Selecciona un archivo Excel:</label>
+        <input type="file" name="file" id="file" accept=".xlsx, .xls">
+        <label for="message">Mensaje personalizado:</label>
+        <input type="text" name="message" id="message">
         <button type="submit">Procesar</button>
     </form>
 </body>

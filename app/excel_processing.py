@@ -3,7 +3,7 @@ import webbrowser as web
 import pyautogui as pg
 import time
 
-def process_excel(data):
+def process_excel(data, message):
     # Procesa el archivo Excel y envía mensajes de WhatsApp aquí
     #url_excel= r"C:\Users\---5---\Desktop\Clientes.xlsx"
     #img=Image.open(r"C:\Users\---5---\Desktop\descargar.jpeg")
@@ -17,8 +17,9 @@ def process_excel(data):
         producto = data.loc[i,'Producto']
         
         # Crear mensaje personalizado
-        mensaje = "Hola, " + nombre + "! Gracias por comprar " + producto + " con nosotros 🙌"
-        
+        # Usar el mensaje personalizado proporcionado desde el frontend
+        mensaje = f'Hola {nombre} {message}'
+
         # Abrir una nueva pestaña para entrar a WhatsApp Web
         # Opción 1: Si te abre WhastApp Web directamente en Google Chrome
         web.open("https://web.whatsapp.com/send?phone=" + celular)
